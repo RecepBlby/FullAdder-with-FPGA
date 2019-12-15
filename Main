@@ -1,0 +1,11 @@
+`timescale 1ns / 1ps
+module FullAdder(x,y,c0,sum,carry);
+input x,y,c0;
+output sum,carry;
+reg sum,carry;
+always@(x,y,c0)
+begin
+ sum = x ^ y ^ c0;
+ carry = x & y | x&c0 | y&c0;
+end
+endmodule
